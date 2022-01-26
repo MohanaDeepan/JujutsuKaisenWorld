@@ -14,9 +14,22 @@
     <link rel="icon" href="/Icons/Jujutsu-Kaisen-logo-yellow256px.png" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Jujutsu Kaisen World | Ad free</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      jQuery(window).scroll(function(){
+    var fromTopPx = 100; // distance to trigger
+    var scrolledFromtop = jQuery(window).scrollTop();
+    if(scrolledFromtop > fromTopPx){
+        jQuery('section').addClass('scrolled');
+    }else{
+        jQuery('section').removeClass('scrolled');
+    }
+});
+    </script>
   </head>
   <body>
     <nav>
+      <div class="navBG"></div>
       <div class="nav-container">
         <div class="leftContainer">
           <ul>
@@ -43,6 +56,31 @@
       </div>
     </nav>
 
-    <section></section>
+    <section id="Homepage">
+      <div class="Homebg">
+        <div class="intro-content">
+          <div class="contentBG">
+            <h1>Welcome to the Jujutsu Kaisen World</h1>
+            <p>
+              This site completely built by a fan, for fans, and dedicated to
+              housing everything related to Gege Akutami's Jujutsu Kaisen. My
+              ambition is to provide all jujutsu related contents in a single
+              site, completely ads free. Also, consider supporting original
+              creator too.
+            </p>
+            <h1></br>Story</h1>
+            <p>
+              In the realm of Jujutsu Kaisen, Cursed Spirits prey on unwary
+              mortals, and portions of the famed and feared demon Ryomen Sukuna
+              have been lost and scattered. The power gained by any curse that
+              consumes Sukuna's body parts has the potential to destroy the
+              world as we know it. Fortunately, a mystery school of Jujutsu
+              Sorcerers exists to safeguard the living's perilous life from the
+              supernatural!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

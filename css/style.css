@@ -1,6 +1,13 @@
 /* Global Styles */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Kaushan+Script&display=swap");
+
+/*
+@font-face {
+  font-family: "Kaushan Script", cursive;
+} */
+
 @font-face {
   font-family: "mangat";
   font-style: normal;
@@ -30,13 +37,24 @@
 html {
   font-family: "Raleway", sans-serif;
   font-size: 62.5%;
-  background: black;
 }
 
 nav {
   height: 8vh;
   width: 100%;
   position: fixed;
+  z-index: 10;
+}
+
+.navBG {
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.7;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: -1;
 }
 
 .nav-container {
@@ -48,7 +66,7 @@ nav {
 }
 
 .nav-container ul {
-  margin: 2.2vh auto;
+  margin: 2.6vh auto;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -72,7 +90,7 @@ nav {
 }
 
 .LogoContainer {
-  height: 100%;
+  height: 3.5vw;
   width: auto;
 }
 
@@ -81,6 +99,70 @@ nav {
   width: 40%;
 }
 
+/* Homepage section starts here*/
+
 section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
+    url(/images/MainBGLandscape.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   height: 100vh;
+  width: auto;
+}
+
+section.scrolled {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
+    url(/images/MainBGLandscapealt2.jpg);
+}
+
+.Homebg {
+  opacity: 1;
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro-content {
+  display: flex;
+  position: relative;
+  margin: 8vh 2vw;
+  flex-direction: column;
+  width: 50vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.intro-content::-webkit-scrollbar {
+  display: none;
+}
+
+.contentBG {
+  padding-top: 40vw;
+  padding-bottom: 10vw;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-content h1 {
+  font-size: 2.3vw;
+  font-family: "Kaushan Script", cursive;
+  color: wheat;
+  padding: 2rem 0;
+}
+
+.intro-content p {
+  font-family: "Dongle", sans-serif;
+  font-size: 2.3vw;
+  text-indent: 2.5vw;
+  color: wheat;
+  text-align: justify;
+  color: #ffffff;
 }
