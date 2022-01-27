@@ -32,11 +32,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 62.5%;
+  cursor: url("/Cursor/Sukuna\ Cursor\ 72px.png"), auto;
+  overflow: hidden;
 }
 
 html {
-  font-family: "Raleway", sans-serif;
-  font-size: 62.5%;
+  background-color: black;
+  height: 100.1vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 nav {
@@ -82,6 +93,7 @@ nav {
   font-style: normal;
   font-weight: normal;
   font-size: 1.1vw;
+  cursor: url("/Cursor/Sukuna\ Cursor\ 72px.png"), default;
 }
 
 .leftContainer {
@@ -101,35 +113,60 @@ nav {
 
 /* Homepage section starts here*/
 
-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
-    url(/images/MainBGLandscape.jpg);
-  background-repeat: no-repeat;
+#Homepage {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.imgcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+.imgcontainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url(/images/MainBGLandscape.jpg);
   background-size: cover;
   background-position: top;
-  height: 100vh;
-  width: auto;
+  background-attachment: fixed;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-section.scrolled {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
-    url(/images/MainBGLandscapealt2.jpg);
+.imgcontainer::-webkit-scrollbar {
+  display: none;
 }
 
-.Homebg {
-  opacity: 1;
-  height: 100vh;
-  width: auto;
-  overflow: hidden;
+.imgcontainer.slide1 {
   position: relative;
+  background: url(/images/MainBGLandscape.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.imgcontainer.slide2 {
+  position: relative;
+  background: url(/images/MainBGLandscapealt2.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  z-index: 0;
 }
 
 .intro-content {
   display: flex;
-  position: relative;
-  margin: 8vh 2vw;
+  position: absolute;
+  margin: 10vh 5vw;
   flex-direction: column;
-  width: 50vw;
+  width: 45vw;
   height: 90vh;
   justify-content: center;
   align-items: center;
@@ -143,8 +180,8 @@ section.scrolled {
 }
 
 .contentBG {
-  padding-top: 40vw;
-  padding-bottom: 10vw;
+  padding-top: 35vw;
+  padding-bottom: 6vw;
   position: absolute;
   justify-content: center;
   align-items: center;
