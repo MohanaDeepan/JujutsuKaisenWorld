@@ -12,7 +12,7 @@
       content="Welcome to Jujutsu Kaisen World, here you can watch all jujutsu related contents, completely ad free site for your convenience"
     />
     <link rel="icon" href="/Icons/Jujutsu-Kaisen-logo-yellow256px.png" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Anime.css" />
     <title>Jujutsu Kaisen World | Anime</title>
   </head>
   <body>
@@ -43,5 +43,39 @@
         </div>
       </div>
     </nav>
+
+    <section class="Anime">
+      <div class="anim-box">
+        <div class="anim">
+          <h1>Anime</h1>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">
+            Subbed
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="#">Season 1</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
   </body>
 </html>

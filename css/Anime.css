@@ -40,14 +40,6 @@
 
 html {
   background-color: black;
-  height: 100.1vh;
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-html::-webkit-scrollbar {
-  display: none;
 }
 
 nav {
@@ -111,95 +103,65 @@ nav {
   width: 40%;
 }
 
-/* Homepage section starts here*/
-
-#Homepage {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-#Homepage::-webkit-scrollbar {
-  display: none;
-}
-
-.imgcontainer {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: url(/images/MainBGLandscape.jpg);
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.imgcontainer::-webkit-scrollbar {
-  display: none;
-}
-
-.imgcontainer.slide1 {
-  position: relative;
-  background: url(/images/MainBGLandscape.jpg);
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-}
-
-.imgcontainer.slide2 {
-  position: relative;
-  background: url(/images/MainBGLandscapealt2.jpg);
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  z-index: 0;
-}
-
-.intro-content {
-  display: flex;
-  position: absolute;
-  margin: 10vh 5vw;
-  flex-direction: column;
-  width: 45vw;
+.Anime {
+  top: 10vh;
   height: 90vh;
-  justify-content: center;
-  align-items: center;
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
 }
 
-.intro-content::-webkit-scrollbar {
-  display: none;
+.anim-box {
+  height: 90vh;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  position: relative;
 }
 
-.contentBG {
-  padding-top: 35vw;
-  padding-bottom: 6vw;
+.anim {
+  display: flex;
   position: absolute;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-.intro-content h1 {
-  font-size: 2.3vw;
-  font-family: "Kaushan Script", cursive;
-  color: wheat;
-  padding: 2rem 0;
+.anim h1 {
+  display: flex;
+  color: white;
 }
 
-.intro-content p {
-  font-family: "Dongle", sans-serif;
-  font-size: 2.3vw;
-  text-indent: 2.5vw;
-  color: wheat;
-  text-align: justify;
-  color: #ffffff;
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
+  background-color: red;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
 }
